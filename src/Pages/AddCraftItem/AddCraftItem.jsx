@@ -9,6 +9,7 @@ const AddCraftItem = () => {
     const [stockStatus, setStockStatus] = useState('')
 
     const { email, displayName } = user
+    console.log(email)
 
     const handleCustomization = event => {
         setCustomization(event.target.value)
