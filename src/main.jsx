@@ -14,6 +14,8 @@ import MyArtCraftList from './Pages/MyArtCraftList/MyArtCraftList.jsx';
 import Login from './Pages/Login/Login.jsx';
 import Register from './Pages/Register/Register.jsx';
 import AuthProvider from './Provider/AuthProvider.jsx';
+import PrivateRoutes from './Pages/PrivateRoutes/PrivateRoutes.jsx';
+import CraftDetails from './Pages/CraftDetails/CraftDetails.jsx';
 
 const router = createBrowserRouter([
   {
@@ -22,7 +24,14 @@ const router = createBrowserRouter([
     children: [
       {
         path: '/',
-        element: <Home></Home>
+        element: <Home></Home>,
+        loader: () => fetch('http://localhost:5000/Craft_Item')
+      },
+      {
+        path: '/craft_details/:id',
+        element: <PrivateRoutes><CraftDetails></CraftDetails></PrivateRoutes>,
+        loader: () => fetch('http://localhost:5000/Craft_Item')
+
       },
       {
         path: 'all_art',
@@ -30,11 +39,11 @@ const router = createBrowserRouter([
       },
       {
         path: 'add_craft',
-        element: <AddCraftItem></AddCraftItem>
+        element: <PrivateRoutes><AddCraftItem></AddCraftItem></PrivateRoutes>
       },
       {
         path: 'my_art',
-        element: <MyArtCraftList></MyArtCraftList>
+        element: <PrivateRoutes><MyArtCraftList></MyArtCraftList></PrivateRoutes>
       },
       {
         path: 'login',

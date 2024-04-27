@@ -7,19 +7,40 @@ import { AuthContect } from '../../Provider/AuthProvider';
 
 const Login = () => {
 
-    const {loginUser} = useContext(AuthContect)
+    const { loginUser, googleSignIn, githubSignIn } = useContext(AuthContect)
 
-    const handleLogin = e =>{
+    const handleLogin = e => {
         e.preventDefault()
         const from = e.target
         const email = from.email.value
         const password = from.password.value
         console.log(email, password)
         loginUser(email, password)
+            .then(result => {
+                console.log(result.user)
+            })
+            .catch(error => {
+                console.log(error.message)
+            })
+    }
+
+
+    const handleGoogleSignIn = () => {
+        googleSignIn()
+            .then(result => {
+                console.log(result.user)
+            })
+            .catch(error => {
+                console.log(error.message)
+            })
+    }
+
+    const handleGitHubSignIn = () => {
+        githubSignIn()
         .then(result =>{
-            console.log(result.user)
+            console.log(result)
         })
-        .catch(error =>{
+        .then(error =>{
             console.log(error.message)
         })
     }
@@ -31,11 +52,11 @@ const Login = () => {
                 <form onSubmit={handleLogin} className='space-y-3'>
                     <div className='flex flex-col space-y-2'>
                         <label className='text-[17px]' htmlFor="">Email</label>
-                        <input className='input input-bordered' type="email" name="email" placeholder='Enter Your Email' id="" />
+                        <input className='input input-bordered' type="email" name="email" placeholder='Enter Your Email' />
                     </div>
                     <div className='flex flex-col space-y-2'>
                         <label className='text-[17px]' htmlFor="">Password</label>
-                        <input className='input input-bordered' type="password" placeholder='Password' name="password" id="" />
+                        <input className='input input-bordered' type="password" placeholder='Password' name="password" />
                     </div>
                     <div className='text-center'>
                         <input className='input input-bordered lg:w-52 w-full' type="submit" value="Login" />
@@ -49,11 +70,11 @@ const Login = () => {
                         <div className='w-[50%] border'></div>
                     </div>
                     <div className='flex justify-center items-center space-x-5'>
-                        <div className='btn flex items-center'>
+                        <div onClick={handleGoogleSignIn} className='btn flex items-center'>
                             <img className='w-5' src={google} alt="" />
                             <span>Log in with Google</span>
                         </div>
-                        <div className='btn flex items-center'>
+                        <div onClick={handleGitHubSignIn} className='btn flex items-center'>
                             <img className='w-5' src={github} alt="" />
                             <span>Log in with Google</span>
                         </div>
