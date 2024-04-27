@@ -1,13 +1,18 @@
 import React, { useContext } from 'react';
 import google from '../../assets/google.png'
 import github from '../../assets/github.png'
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContect } from '../../Provider/AuthProvider';
+import { ToastContainer, toast } from 'react-toastify';
+
+import 'react-toastify/dist/ReactToastify.css';
 
 
 const Login = () => {
 
     const { loginUser, googleSignIn, githubSignIn } = useContext(AuthContect)
+    const location = useLocation()
+    const navigate = useNavigate()
 
     const handleLogin = e => {
         e.preventDefault()
@@ -18,9 +23,12 @@ const Login = () => {
         loginUser(email, password)
             .then(result => {
                 console.log(result.user)
+                navigate(location?.state ? location.state : '/')
+                toast.success("Your Login Succeessfuly")
             })
             .catch(error => {
                 console.log(error.message)
+                toast.error("Your Email And Password Something Rong")
             })
     }
 
@@ -37,12 +45,13 @@ const Login = () => {
 
     const handleGitHubSignIn = () => {
         githubSignIn()
-        .then(result =>{
-            console.log(result)
-        })
-        .then(error =>{
-            console.log(error.message)
-        })
+            .then(result => {
+                console.log(result)
+            })
+            .then(error => {
+                console.log(error.message)
+
+            })
     }
 
     return (
@@ -95,6 +104,7 @@ const Login = () => {
                         </p>
                     </Link>
                 </div>
+                <ToastContainer />
             </div>
         </div>
     );

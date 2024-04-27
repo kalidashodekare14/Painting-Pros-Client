@@ -1,6 +1,9 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContect } from '../../Provider/AuthProvider';
+import { ToastContainer, toast } from 'react-toastify';
+
+import 'react-toastify/dist/ReactToastify.css';
 
 const Register = () => {
 
@@ -15,15 +18,30 @@ const Register = () => {
         const photoUrl = from.photo.value
         const password = from.password.value
         console.log(name, email, photoUrl, password)
+
+
+        if (password.length < 6) {
+           return toast.warning("Must be 6 Character Password");
+        }
+        else if (!/[A-Z]/.test(password)) {
+          return  toast.warning("Any character must be uppercase.");
+        }
+        else if(!/[a-z]/.test(password)){
+          return  toast.warning("Must Be Lowercase Character");
+        }
+
+
         registerUser(email, password)
-        .then(result =>{
-            console.log(result.user)
-            updateProfileSystem(name, photoUrl)
-            console.log(name, photoUrl)
-        })
-        .catch(error =>{
-            console.log(error.message)
-        })
+            .then(result => {
+                console.log(result.user)
+                updateProfileSystem(name, photoUrl)
+                console.log(name, photoUrl)
+                toast.success("Your Register Successfully");
+            })
+            .catch(error => {
+                console.log(error.message)
+
+            })
     }
 
     return (
@@ -65,6 +83,7 @@ const Register = () => {
 
                 </div>
             </div>
+            <ToastContainer />
         </div >
     );
 };
