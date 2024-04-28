@@ -1,25 +1,23 @@
 import React from 'react';
-import { Link, useLoaderData, useParams } from 'react-router-dom';
-import { IoMdPricetags } from "react-icons/io";
-import { IoIosStarOutline } from "react-icons/io";
-import { BiCustomize } from "react-icons/bi";
-import { CgShutterstock } from "react-icons/cg";
+import { CgShutterstock } from 'react-icons/cg';
 import { FaRegStar } from 'react-icons/fa';
+import { IoMdPricetags } from 'react-icons/io';
+import { Link, useLoaderData, useParams } from 'react-router-dom';
 
+const AllCraftDetails = () => {
 
-const CraftDetails = () => {
-
-    const paintingData = useLoaderData()
+    const allArts = useLoaderData()
     const { id } = useParams()
-    const check = paintingData.find(data => data._id === id)
+    const check = allArts.find(art => art._id === id)
     console.log(check)
+
     return (
-        <div className='min-h-screen flex justify-center items-center'>
-            <div className='flex flex-col lg:flex-row justify-center lg:items-center space-x-10'>
-                <div className='lg:w-[40%] border-8 border-black p-3'>
-                    <img className='w-full h-[80vh]' src={check.image} alt="" />
+        <div>
+            <div className='flex flex-col lg:flex-row justify-center lg:items-center min-h-screen space-x-10'>
+                <div>
+                    <img className='lg:w-96' src={check.image} alt="" />
                 </div>
-                <div className='space-y-5 lg:w-[50%]'>
+                <div className='space-y-5 lg:w-[40%]'>
                     <div className='border-b pb-3'>
                         <h2 className='text-[30px] font-work'>{check.item_name}</h2>
                     </div>
@@ -52,4 +50,4 @@ const CraftDetails = () => {
     );
 };
 
-export default CraftDetails;
+export default AllCraftDetails;

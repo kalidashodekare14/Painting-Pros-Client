@@ -12,6 +12,10 @@ const MyArtCraftList = () => {
     console.log(user.email)
     const [myPaint, setMyPaint] = useState([])
 
+    
+    // const {customization} = myPaint
+    
+    // console.log(customization)
 
     useEffect(() => {
         fetch(`http://localhost:5000/my_art/${user?.email}`)
@@ -60,9 +64,32 @@ const MyArtCraftList = () => {
     }
 
 
+    const handleYes = () => {
+        const check = myPaint.sort((a, b)=> b.customization - a.customization)
+        setMyPaint([...check])
+    }
+
+    const handleNo = () => {
+
+    }
+
+
 
     return (
         <div >
+            <div className='flex justify-center items-center my-5'>
+                <details className="dropdown">
+                    <summary className="m-1 btn">Sort By</summary>
+                    <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
+                        <li onClick={handleYes}>
+                            <span>Yes</span>
+                        </li>
+                        <li onClick={handleNo}>
+                            <span>No</span>
+                        </li>
+                    </ul>
+                </details>
+            </div>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-5 lg:mx-20 my-10'>
                 {
                     myPaint.map(paint => <div key={paint._id}>

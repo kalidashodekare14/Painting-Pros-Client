@@ -9,23 +9,29 @@ export const AuthContect = createContext(null)
 const AuthProvider = ({ children }) => {
 
     const [user, setUser] = useState([])
+    const [loader, setLoader] = useState(true)
 
     const provider = new GoogleAuthProvider()
     const gitProvider = new GithubAuthProvider()
 
     const registerUser = (email, password) => {
+        setLoader(true)
         return createUserWithEmailAndPassword(auth, email, password)
     }
     const loginUser = (email, password) => {
+        setLoader(true)
         return signInWithEmailAndPassword(auth, email, password)
     }
     const signOutUser = () =>{
+        setLoader(true)
         return signOut(auth)
     }
     const googleSignIn = () =>{
+        setLoader(true)
        return signInWithPopup(auth, provider)
     }
     const githubSignIn = () =>{
+        setLoader(true)
         return signInWithPopup(auth, gitProvider)
     }
 
@@ -36,6 +42,7 @@ const AuthProvider = ({ children }) => {
         })
         .then(()=>{
             setUser({displayName: name, photoURL: photoUrl})
+            setLoader(true)
         })
         .catch(()=>{
             // console.log(error.message)
@@ -47,13 +54,14 @@ const AuthProvider = ({ children }) => {
         const unSubscribe = onAuthStateChanged(auth, currentUser =>{
             setUser(currentUser)
             console.log(currentUser)
+            setLoader(false)
         })
         return () => {
             unSubscribe()
         }
-    }, [user    ])
+    }, [user])
 
-    const info = { user, registerUser, loginUser, updateProfileSystem, signOutUser, googleSignIn, githubSignIn, setUser}
+    const info = { user, registerUser, loginUser, updateProfileSystem, signOutUser, googleSignIn, githubSignIn, setUser, loader}
 
     return (
         <AuthContect.Provider value={info}>

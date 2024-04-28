@@ -62,7 +62,7 @@ const AddCraftItem = () => {
 
     return (
         <div className='min-h-screen'>
-            <div className='lg:mx-40 mx-5 shadow-xl p-5 mt-10'>
+            <div className='lg:mx-52 mx-5 shadow-xl p-5 mt-10'>
                 <h1 className='text-center text-4xl my-5 font-work'>Add Your Painting</h1>
                 <form onSubmit={handleAddPainting} className='space-y-3'>
                     <div className='flex flex-col space-y-2'>

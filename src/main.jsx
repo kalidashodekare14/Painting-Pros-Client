@@ -17,11 +17,14 @@ import AuthProvider from './Provider/AuthProvider.jsx';
 import PrivateRoutes from './Pages/PrivateRoutes/PrivateRoutes.jsx';
 import CraftDetails from './Pages/CraftDetails/CraftDetails.jsx';
 import UpdateMyArt from './Pages/UpdateMyArt/UpdateMyArt.jsx';
+import AllCraftDetails from './Pages/AllCraftDetails/AllCraftDetails.jsx';
+import ErrorPage from './Pages/ErrorPage/ErrorPage.jsx';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
+    errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
         path: '/',
@@ -36,7 +39,13 @@ const router = createBrowserRouter([
       },
       {
         path: 'all_art',
-        element: <AllArt></AllArt>
+        element: <AllArt></AllArt>,
+        loader: () => fetch('http://localhost:5000/all_craft')
+      },
+      {
+        path: '/all_craft_details/:id',
+        element: <PrivateRoutes><AllCraftDetails></AllCraftDetails></PrivateRoutes>,
+        loader: () => fetch(`http://localhost:5000/all_craft`)
       },
       {
         path: 'add_craft',
