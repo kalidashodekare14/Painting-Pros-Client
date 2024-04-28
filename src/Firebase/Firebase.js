@@ -6,12 +6,12 @@ import { getAuth } from "firebase/auth";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyBGhX2CG_bDV4S0iveIfdfXb4G_kGh717Q",
-  authDomain: "painting-pros-3868a.firebaseapp.com",
-  projectId: "painting-pros-3868a",
-  storageBucket: "painting-pros-3868a.appspot.com",
-  messagingSenderId: "433510509936",
-  appId: "1:433510509936:web:7ad82c59e975617bc1f3b5"
+  apiKey: import.meta.env.VITE_APIKEY, 
+  authDomain: import.meta.env.VITE_AUTHDOMAIN, 
+  projectId: import.meta.env.VITE_PROJECTID, 
+  storageBucket: import.meta.env.VITE_STORAGEBUCKET, 
+  messagingSenderId: import.meta.env.VITE_MESSAGINGSENDERID, 
+  appId: import.meta.env.VITE_APPID
 };
 
 // Initialize Firebase
