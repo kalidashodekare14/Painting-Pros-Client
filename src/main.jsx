@@ -16,6 +16,7 @@ import Register from './Pages/Register/Register.jsx';
 import AuthProvider from './Provider/AuthProvider.jsx';
 import PrivateRoutes from './Pages/PrivateRoutes/PrivateRoutes.jsx';
 import CraftDetails from './Pages/CraftDetails/CraftDetails.jsx';
+import UpdateMyArt from './Pages/UpdateMyArt/UpdateMyArt.jsx';
 
 const router = createBrowserRouter([
   {
@@ -44,6 +45,11 @@ const router = createBrowserRouter([
       {
         path: 'my_art',
         element: <PrivateRoutes><MyArtCraftList></MyArtCraftList></PrivateRoutes>
+      },
+      {
+        path: '/update_craft/:id',
+        element: <PrivateRoutes><UpdateMyArt></UpdateMyArt></PrivateRoutes>,
+        loader: ({ params }) => fetch(`http://localhost:5000/update_craft/${params.id}`)
       },
       {
         path: 'login',

@@ -11,10 +11,10 @@ const MyArtCraftList = () => {
     const { user } = useContext(AuthContect)
     console.log(user.email)
     const [myPaint, setMyPaint] = useState([])
-    
+
 
     useEffect(() => {
-        fetch(`http://localhost:5000/myArt/${user?.email}`)
+        fetch(`http://localhost:5000/my_art/${user?.email}`)
             .then(res => res.json())
             .then(data => {
                 console.log(data)
@@ -36,7 +36,7 @@ const MyArtCraftList = () => {
         }).then((result) => {
             if (result.isConfirmed) {
 
-                fetch(`http://localhost:5000/myArt/${_id}`, {
+                fetch(`http://localhost:5000/my_art/${_id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())
@@ -51,7 +51,7 @@ const MyArtCraftList = () => {
                             const reaming = myPaint.filter(paint => paint._id !== _id)
                             setMyPaint(reaming)
                         }
-                       
+
                     })
 
 
@@ -65,7 +65,7 @@ const MyArtCraftList = () => {
         <div >
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-5 lg:mx-20 my-10'>
                 {
-                    myPaint.map(paint => <div>
+                    myPaint.map(paint => <div key={paint._id}>
                         <div className="hero shadow">
                             <div className="hero-content flex-col lg:flex-row">
                                 <div className='relative border-8 border-black p-3 lg:w-[50%] '>
@@ -96,7 +96,7 @@ const MyArtCraftList = () => {
                                     }</p>
                                     {/* <button className="btn btn-primary">Get Started</button> */}
                                     <div className='flex justify-end items-center space-x-3'>
-                                        <Link>
+                                        <Link to={`/update_craft/${paint._id}`}>
                                             <FaEdit className='text-[25px] hover:text-blue-700' />
                                         </Link>
                                         <div onClick={() => handleDelete(paint._id)}>
