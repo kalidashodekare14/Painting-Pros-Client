@@ -99,7 +99,7 @@ const Login = () => {
                         "
 
                             >
-                                Sign up here{" "}
+                                Sign up {" "}
                             </a>
                         </p>
                     </Link>

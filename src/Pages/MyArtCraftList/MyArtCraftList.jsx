@@ -12,10 +12,18 @@ const MyArtCraftList = () => {
     console.log(user.email)
     const [myPaint, setMyPaint] = useState([])
 
-    
-    // const {customization} = myPaint
-    
-    // console.log(customization)
+
+    const handleSorts = sortArt => {
+        if (sortArt === 'cusYes') {
+            const yesSort = myPaint.filter(sorts => sorts.customization === 'Yes')
+            setMyPaint(yesSort)
+            console.log(yesSort)
+        }
+        else if (sortArt === 'cusNo') {
+            const noSort = myPaint.filter(sorts => sorts.customization === 'No')
+            setMyPaint(noSort)
+        }
+    }
 
     useEffect(() => {
         fetch(`http://localhost:5000/my_art/${user?.email}`)
@@ -64,14 +72,6 @@ const MyArtCraftList = () => {
     }
 
 
-    const handleYes = () => {
-        const check = myPaint.sort((a, b)=> b.customization - a.customization)
-        setMyPaint([...check])
-    }
-
-    const handleNo = () => {
-
-    }
 
 
 
@@ -81,10 +81,10 @@ const MyArtCraftList = () => {
                 <details className="dropdown">
                     <summary className="m-1 btn">Sort By</summary>
                     <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
-                        <li onClick={handleYes}>
+                        <li onClick={() => handleSorts('cusYes')}>
                             <span>Yes</span>
                         </li>
-                        <li onClick={handleNo}>
+                        <li onClick={() => handleSorts('cusNo')}>
                             <span>No</span>
                         </li>
                     </ul>
@@ -119,7 +119,7 @@ const MyArtCraftList = () => {
                                     <h1 className='text-[16px] font-[500]'>Customization: {paint.customization}</h1>
                                     <h2 className='text-[16px] font-[500]'>Stock Status: {paint.stockStatus}</h2>
 
-                                    <p className="text-[15px] font-[500]  tracking-[0.6px] text-[#000000d3]">{paint.short_description.slice(0, 100)
+                                    <p className="text-[15px] font-[500]  tracking-[0.6px] ">{paint.short_description.slice(0, 100)
                                     }</p>
                                     {/* <button className="btn btn-primary">Get Started</button> */}
                                     <div className='flex justify-end items-center space-x-3'>

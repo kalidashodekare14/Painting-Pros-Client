@@ -58,45 +58,57 @@ const AddCraftItem = () => {
 
             })
 
+        fetch('http://localhost:5000/art_category',{
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(info)
+        })
+        .then(res => res.json())
+        .then(data =>{
+            console.log(data)
+        })
+
     }
 
     return (
         <div className='min-h-screen'>
-            <div className='lg:mx-52 mx-5 shadow-xl p-5 mt-10'>
+            <div className='card lg:mx-52 mx-5 shadow-xl p-5 mt-10'>
                 <h1 className='text-center text-4xl my-5 font-work'>Add Your Painting</h1>
                 <form onSubmit={handleAddPainting} className='space-y-3'>
                     <div className='flex flex-col space-y-2'>
-                        <label className='font-work font-[600] text-[#000000bd]' htmlFor="">Name</label>
+                        <label className='font-work font-[600] ' htmlFor="">Name</label>
                         <input className='input input-bordered' type="text" name="name" id="" />
                     </div>
                     <div className='flex flex-col space-y-2'>
-                        <label className='font-work font-[600] text-[#000000bd]' htmlFor="">Subcategory Name</label>
+                        <label className='font-work font-[600] ' htmlFor="">Subcategory Name</label>
                         <input className='input input-bordered' type="text" name="subTitle" id="" />
                     </div>
                     <div className='flex flex-col space-y-2'>
-                        <label className='font-work font-[600] text-[#000000bd]' htmlFor="">Short Description</label>
+                        <label className='font-work font-[600] ' htmlFor="">Short Description</label>
                         <input className='input input-bordered' type="text" name="shortDescription" id="" />
                     </div>
                     <div className='flex space-x-3'>
                         <div className='flex flex-col space-y-2 w-full'>
-                            <label className='font-work font-[600] text-[#000000bd]' htmlFor="">Price</label>
+                            <label className='font-work font-[600] ' htmlFor="">Price</label>
                             <input className='input input-bordered w-full' type="number" name="price" id="" />
                         </div>
                         <div className='flex flex-col space-y-2 w-full'>
-                            <label className='font-work font-[600] text-[#000000bd]' htmlFor="">Rating</label>
+                            <label className='font-work font-[600] ' htmlFor="">Rating</label>
                             <input className='input input-bordered w-full' type="text" name="rating" id="" />
                         </div>
                     </div>
                     <div className='flex flex-col space-y-2 w-full'>
-                        <label className='font-work font-[600] text-[#000000bd]' htmlFor="">Processing Time</label>
+                        <label className='font-work font-[600] ' htmlFor="">Processing Time</label>
                         <input className='input input-bordered w-full' type="text" name="processingTime" id="" />
                     </div>
                     <div className='flex flex-col space-y-2 w-full'>
-                        <label className='font-work font-[600] text-[#000000bd]' htmlFor="">Photo Url</label>
+                        <label className='font-work font-[600] ' htmlFor="">Photo Url</label>
                         <input className='input input-bordered w-full' type="text" name="photoUrl" id="" />
                     </div>
                     <div className='flex items-center space-x-3'>
-                        <h1 className='font-work font-[600] text-[#000000bd]'>Customization</h1>
+                        <h1 className='font-work font-[600] '>Customization</h1>
                         <input type="radio"
                             name="radio-1"
                             className="radio"
@@ -115,7 +127,7 @@ const AddCraftItem = () => {
                         <p>No</p>
                     </div>
                     <div className='flex items-center space-x-3'>
-                        <h1 className='font-work font-[600] text-[#000000bd]'>Stock Status</h1>
+                        <h1 className='font-work font-[600] '>Stock Status</h1>
                         <input type="radio"
                             name="radio-2"
                             className="radio"

@@ -1,8 +1,29 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Painting Pros
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+
+## 🔗 Live Link: [Painting Pros](https://painting-pros-3868a.web.app/)
+
+
+
+## Authors
+
+- This website is for painting and drawing. I have shown some painting data on this website.
+
+- And there is a button called View Details specific to that data where you can see the complete information of that data if clicked.
+
+- On the website I am creating an ad craft right. If any user wants to add data there then he can add data.
+
+- I have created some other routes on this website. If a user adds data under the name of my art and craft item, then only his data can be seen in that route.
+
+- And made a little more route. Any user on that route. If adding data, all user's data will be seen there.
+
+##  npm package name:
+-  [React Router](https://reactrouter.com/en/main)
+-  [Tailwindcss](https://tailwindcss.com)
+-  [Daisyui](https://daisyui.com/)
+-  [Swiperjs](https://swiperjs.com)
+-  [AOS Animation](https://michalsnik.github.io/aos)
+- [React-tooltip](https://react-tooltip.com/)
