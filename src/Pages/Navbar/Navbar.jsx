@@ -115,7 +115,7 @@ const Navbar = () => {
                         </a>
                     </div>
                         : <Link to="/login">
-                            <div className='flex items-center text-[16px] space-x-2'>
+                            <div className='flex items-center text-[16px] space-x-2 border px-5 py-3 rounded-2xl'>
                                 <FaRegUser className='text-2xl' />
                                 <h1>Login</h1>
                             </div>
