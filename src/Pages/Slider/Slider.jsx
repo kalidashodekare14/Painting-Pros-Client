@@ -1,6 +1,6 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Typewriter } from 'react-simple-typewriter'
+import { useTypewriter, Cursor } from 'react-simple-typewriter'
 
 import 'swiper/css';
 import 'swiper/css/effect-fade';
@@ -12,6 +12,7 @@ import slider from '../../assets/banner1.png'
 import slider1 from '../../assets/slider2.png'
 import slider2 from '../../assets/slider3.png'
 
+
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
@@ -20,6 +21,8 @@ import { EffectFade, Navigation, Pagination } from 'swiper/modules';
 
 
 const Slider = () => {
+
+  
     return (
         <div>
             <Swiper
@@ -41,6 +44,7 @@ const Slider = () => {
                         </div>
                         <img className='lg:w-[50%]' src={slider} alt="" />
                     </div>
+
                 </SwiperSlide>
                 <SwiperSlide>
                 <div className='flex flex-col-reverse lg:flex-row justify-between items-center lg:mx-32 lg:m-20 mx-5 '>

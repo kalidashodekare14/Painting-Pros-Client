@@ -5,7 +5,7 @@ import { AuthContect } from '../../Provider/AuthProvider';
 import 'react-tooltip/dist/react-tooltip.css'
 import { Tooltip } from 'react-tooltip'
 import { Tooltip as ReactTooltip } from 'react-tooltip'
-
+import logo from '/logo.png'
 
 const Navbar = () => {
 
@@ -73,7 +73,9 @@ const Navbar = () => {
                         {links}
                     </ul>
                 </div>
-                <a className="btn btn-ghost text-xl font-work font-[500] text-[14px]">daisyUI</a>
+                <a className="btn btn-ghost text-xl font-work font-[500] text-[14px]">
+                    <img className='w-32' src={logo} alt="" />
+                </a>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1 space-x-3">
