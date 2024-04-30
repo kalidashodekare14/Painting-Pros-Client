@@ -41,7 +41,7 @@ const Home = () => {
                     </div>
                     <div className='flex-1 space-y-3'>
                         <h1 className='text-3xl font-bold tracking-[1px]'>Crafted in a unique manner</h1>
-                        <p className='text-[15px] leading-[1.5em] font-[400] text-[#130404c5]'>Embarking on a new journey, we leave behind the familiar shore. With eyes filled with wonder and hearts open wide, we greet the horizon's call. In each sunrise, we find a promise, in each sunset, a reflection. This voyage, our story, unfolds with every step we take.</p>
+                        <p className='text-[15px] leading-[1.5em] font-[400]'>Embarking on a new journey, we leave behind the familiar shore. With eyes filled with wonder and hearts open wide, we greet the horizon's call. In each sunrise, we find a promise, in each sunset, a reflection. This voyage, our story, unfolds with every step we take.</p>
                         <div>
                             <a href="#">
                                 <button className='hover:text-white border border-spacing-6 border-[#0077b6] hover:bg-gradient-to-r from-[#0fca66] to-[#09823b] px-5 py-4 bg-opacity-0'>View Details </button>
@@ -97,7 +97,7 @@ const Home = () => {
                         >
                             <SwiperSlide>
                                 <div className=''>
-                                    <h1 className='tracking-[2px] text-[#000000a2] leading-6'>A designer is a creative professional who specializes in conceptualizing, visualizing, and crafting aesthetically pleasing and functional designs for various mediums, including digital interfaces, print materials, products, and more. Designers use their artistic skills, knowledge of design principles, and understanding of user experience to create engaging and effective visual solutions.</h1>
+                                    <h1 className='tracking-[2px]  leading-6'>A designer is a creative professional who specializes in conceptualizing, visualizing, and crafting aesthetically pleasing and functional designs for various mediums, including digital interfaces, print materials, products, and more. Designers use their artistic skills, knowledge of design principles, and understanding of user experience to create engaging and effective visual solutions.</h1>
                                     <div className='mt-10'>
                                         <h3 className='font-mono'><span className='text-[#b8cb2d] text-2xl'>Mr. John Due</span> /   Deginer</h3>
                                     </div>
@@ -105,7 +105,7 @@ const Home = () => {
                             </SwiperSlide>
                             <SwiperSlide>
                                 <div>
-                                    <h1 className='tracking-[2px] text-[#000000a2] leading-6'>A developer is a professional who specializes in creating, designing, and maintaining software applications, websites, or other digital solutions. Developers are skilled in various programming languages, frameworks, and tools necessary to build and deploy software products. They typically work closely with designers, project managers, and other stakeholders to understand requirements and translate them into functional code.</h1>
+                                    <h1 className='tracking-[2px]  leading-6'>A developer is a professional who specializes in creating, designing, and maintaining software applications, websites, or other digital solutions. Developers are skilled in various programming languages, frameworks, and tools necessary to build and deploy software products. They typically work closely with designers, project managers, and other stakeholders to understand requirements and translate them into functional code.</h1>
                                     <div className='mt-10'>
                                         <h3 className='font-mono'><span className='text-[#b8cb2d] text-2xl'>David S. Brown</span> /   Developer</h3>
                                     </div>
@@ -113,7 +113,7 @@ const Home = () => {
                             </SwiperSlide>
                             <SwiperSlide>
                                 <div>
-                                    <h1 className='tracking-[2px] text-[#000000a2] leading-6'>A designer is a professional who specializes in creating visual concepts and solutions to communicate ideas that inspire, inform, and captivate consumers. They combine artistic talent with technical skills to develop designs for a variety of mediums, including print, digital, web, and multimedia platforms</h1>
+                                    <h1 className='tracking-[2px]  leading-6'>A designer is a professional who specializes in creating visual concepts and solutions to communicate ideas that inspire, inform, and captivate consumers. They combine artistic talent with technical skills to develop designs for a variety of mediums, including print, digital, web, and multimedia platforms</h1>
                                     <div className='mt-10'>
                                         <h3 className='font-mono'><span className='text-[#b8cb2d] text-2xl'>John S. Gray</span> /   Designer</h3>
                                     </div>

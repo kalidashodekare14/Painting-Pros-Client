@@ -28,6 +28,7 @@
 -  [AOS Animation](https://michalsnik.github.io/aos)
 - [React-tooltip](https://react-tooltip.com/)
 - [React-Helmet](https://www.npmjs.com/package/react-helmet)
+- [React-simple-typewriter](https://www.npmjs.com/package/react-simple-typewriter)
 
 ## Category Name:  
 - Painting and Drawing
