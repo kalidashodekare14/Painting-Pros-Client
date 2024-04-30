@@ -102,7 +102,7 @@ const Home = () => {
                                 <div>
                                     <h1 className='tracking-[2px] text-[#000000a2] leading-6'>A developer is a professional who specializes in creating, designing, and maintaining software applications, websites, or other digital solutions. Developers are skilled in various programming languages, frameworks, and tools necessary to build and deploy software products. They typically work closely with designers, project managers, and other stakeholders to understand requirements and translate them into functional code.</h1>
                                     <div className='mt-10'>
-                                        <h3 className='font-mono'><span className='text-[#b8cb2d] text-2xl'>Mr. John Due</span> /   Developer</h3>
+                                        <h3 className='font-mono'><span className='text-[#b8cb2d] text-2xl'>David S. Brown</span> /   Developer</h3>
                                     </div>
                                 </div>
                             </SwiperSlide>
@@ -110,7 +110,7 @@ const Home = () => {
                                 <div>
                                     <h1 className='tracking-[2px] text-[#000000a2] leading-6'>A designer is a professional who specializes in creating visual concepts and solutions to communicate ideas that inspire, inform, and captivate consumers. They combine artistic talent with technical skills to develop designs for a variety of mediums, including print, digital, web, and multimedia platforms</h1>
                                     <div className='mt-10'>
-                                        <h3 className='font-mono'><span className='text-[#b8cb2d] text-2xl'>Mr. John Due</span> /   Developer</h3>
+                                        <h3 className='font-mono'><span className='text-[#b8cb2d] text-2xl'>John S. Gray</span> /   Designer</h3>
                                     </div>
                                 </div>
                             </SwiperSlide>
