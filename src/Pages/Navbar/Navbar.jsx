@@ -46,18 +46,30 @@ const Navbar = () => {
         <li className='font-work font-[500] text-[14px] '>
             <NavLink to="/"
                 className={({ isActive, isPending }) =>
-                    isPending ? "pending" : isActive ? "text-red-500" : ""
+                    isPending ? "pending" : isActive ? "text-white bg-gradient-to-r from-[#0fca66] to-[#09823b] focus:text-white" : ""
                 }
             >Home</NavLink>
         </li>
         <li>
-            <NavLink className="font-work font-[500] text-[14px] text-dark" to="/all_art">All Art</NavLink>
+            <NavLink
+                className={({ isActive, isPending }) =>
+                    isPending ? "pending" : isActive ? "text-white bg-gradient-to-r from-[#0fca66] to-[#09823b] focus:text-white" : ""
+                }
+                to="/all_art">All Art</NavLink>
         </li>
         <li>
-            <NavLink className="font-work font-[500] text-[14px]" to="/add_craft">Add Craft</NavLink>
+            <NavLink
+                className={({ isActive, isPending }) =>
+                    isPending ? "pending" : isActive ? "text-white bg-gradient-to-r from-[#0fca66] to-[#09823b] focus:text-white" : ""
+                }
+                to="/add_craft">Add Craft</NavLink>
         </li>
         <li>
-            <NavLink className="font-work font-[500] text-[14px]" to="/my_art">My Art</NavLink>
+            <NavLink
+                className={({ isActive, isPending }) =>
+                    isPending ? "pending" : isActive ? "text-white bg-gradient-to-r from-[#0fca66] to-[#09823b] focus:text-white" : ""
+                }
+                to="/my_art">My Art</NavLink>
         </li>
     </>
 
