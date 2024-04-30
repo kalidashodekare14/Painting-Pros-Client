@@ -8,7 +8,7 @@
 
 
 
-## Authors
+## Features
 
 - This website is for painting and drawing. I have shown some painting data on this website.
 

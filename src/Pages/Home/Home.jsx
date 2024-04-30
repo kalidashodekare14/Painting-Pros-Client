@@ -3,13 +3,10 @@ import Slider from '../Slider/Slider';
 import { Link, useLoaderData } from 'react-router-dom';
 import { FaRegStar } from "react-icons/fa6";
 import { Swiper, SwiperSlide } from 'swiper/react';
-import newSlider from '../../assets/pSlider.webp'
-import newSlider1 from '../../assets/pSlier1.jpg'
-import newSlider2 from '../../assets/pSlider2.webp'
-import newSlider3 from '../../assets/pSlider3.webp'
 import developer from '../../assets/developer.webp'
 import designer1 from '../../assets/designer.jpg'
 import designer2 from '../../assets/designer1.jpg'
+import images from '../../assets/pSlider.webp'
 
 import 'swiper/css';
 import 'swiper/css/free-mode';
@@ -23,13 +20,30 @@ const Home = () => {
 
     const paintingData = useLoaderData()
 
-    
-    
+
+
 
     return (
         <div>
             <div>
                 <Slider></Slider>
+            </div>
+            <div className='my-20'>
+                <h2 className='text-center text-4xl'>Our Painting Pro History</h2>
+                <div className='flex flex-col lg:flex-row items-center lg:mx-32 mx-5 my-20 space-x-7'>
+                    <div className=''>
+                        <img src={images} alt="" />
+                    </div>
+                    <div className='flex-1 space-y-3'>
+                        <h1 className='text-3xl font-bold tracking-[1px]'>Crafted in a unique manner</h1>
+                        <p className='text-[15px] leading-[1.5em] font-[400] text-[#130404c5]'>Embarking on a new journey, we leave behind the familiar shore. With eyes filled with wonder and hearts open wide, we greet the horizon's call. In each sunrise, we find a promise, in each sunset, a reflection. This voyage, our story, unfolds with every step we take.</p>
+                        <div>
+                            <a href="#">
+                                <button className='hover:text-white border border-spacing-6 border-[#0077b6] hover:bg-gradient-to-r from-[#0fca66] to-[#09823b] px-5 py-4 bg-opacity-0'>View Details </button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div>
                 <h1 className='text-4xl text-center my-10'>Top Product</h1>
@@ -105,70 +119,7 @@ const Home = () => {
                         </Swiper>
                     </div>
                 </div>
-                <div>
-                    <h1 className='text-center text-3xl my-20'>News</h1>
-                    <div>
-                        <Swiper
-                            slidesPerView={2}
-                            spaceBetween={30}
-                            freeMode={true}
-                            pagination={{
-                                clickable: true,
-                            }}
-                            modules={[FreeMode, Pagination]}
-                            className="mySwiper"
-                        >
-                            <div className="w-full">
-                                <SwiperSlide className='relative'>
-                                    <div>
-                                        <h1 className='absolute  text-3xl bg-[#cfae7a] p-3'>08 oct</h1>
-                                        <img className='h-[60vh] w-full' src={newSlider} alt="" />
-                                    </div>
-                                    <div className='text-left space-y-3 p-5 absolute bottom-0 bg-white mx-20'>
-                                        <span className='text-[15px] font-work text-[#000000bc]'>Edgar E. Lake</span>
-                                        <h1 className='text-2xl'>Unveiling the Ever-Evolving World of Painting</h1>
-                                        <p className='text-[16px] font-work text-[#000000b9]'>immerses you in the dynamic evolution of the painting world, unveiling its vibrant tapestry of creativity and innovation. Journey through the corridors of artistic exploration as traditional</p>
-                                    </div>
-                                </SwiperSlide>
-                                <SwiperSlide className='relative'>
-                                    <div>
-                                        <h1 className='absolute text-3xl bg-[#cfae7a] p-3'>04 dec</h1>
-                                        <img className='h-[60vh] w-full' src={newSlider1} alt="" />
-                                    </div>
-                                    <div className='text-left space-y-3 p-5 absolute bottom-0 bg-white mx-20'>
-                                        <span className='text-[15px] font-work text-[#000000bc]'>Calvin M. Ray</span>
-                                        <h1 className='text-2xl'>Latest Developments in the World of Painting</h1>
-                                        <p className='text-[16px] font-work text-[#000000b9]'>Delve into the vibrant palette of the art world's latest transformations with "Brushstrokes of Change." From groundbreaking exhibitions to innovative techniques</p>
-                                    </div>
-                                </SwiperSlide>
 
-                                <SwiperSlide>
-                                    <div>
-                                        <h1 className='absolute text-3xl bg-[#cfae7a] p-3'>10 sec</h1>
-                                        <img className='h-[60vh] w-full' src={newSlider2} alt="" />
-                                    </div>
-                                    <div className='text-left space-y-3 p-5 absolute bottom-0 bg-white mx-20'>
-                                        <span className='text-[15px] font-work text-[#000000bc]'>Jerry E. Morales</span>
-                                        <h1 className='text-2xl'>A Glimpse into the World of Modern Painting</h1>
-                                        <p className='text-[16px] font-work text-[#000000b9]'>"Palette Perspectives" invites you into the kaleidoscopic realm of modern painting, where creativity knows no bounds and innovation reigns supreme.</p>
-                                    </div>
-                                </SwiperSlide>
-                                <SwiperSlide>
-                                    <div>
-                                        <h1 className='absolute text-3xl bg-[#cfae7a] p-3'>05 Feb</h1>
-                                        <img className='h-[60vh] w-full' src={newSlider3} alt="" />
-                                    </div>
-                                    <div className='text-left space-y-3 p-5 absolute bottom-0 bg-white mx-20'>
-                                        <span className='text-[15px] font-work text-[#000000bc]'>Calvin M. Ray</span>
-                                        <h1 className='text-2xl'> Exploring the Boundless World of Contemporary Painting</h1>
-                                        <p className='text-[16px] font-work text-[#000000b9]'>"Chromatic Horizons" offers a mesmerizing exploration into the expansive and boundless world of contemporary painting. Step into a realm where colors dance, shapes morph, and imagination knows no limits.</p>
-                                    </div>
-                                </SwiperSlide>
-                            </div>
-
-                        </Swiper>
-                    </div>
-                </div>
             </div>
 
         </div>
