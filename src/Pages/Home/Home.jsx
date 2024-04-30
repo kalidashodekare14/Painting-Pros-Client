@@ -78,7 +78,7 @@ const Home = () => {
                 </div>
                 {/* category */}
                 <div>
-                    <Categories></Categories>
+                    {/* <Categories></Categories> */}
                 </div>
                 <div className='relative my-20 lg:mx-20 border p-5'>
                     <div className='flex justify-center items-center space-x-3'>
