@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import { FaRegStar } from 'react-icons/fa';
 import { Link, useLoaderData } from 'react-router-dom';
 
@@ -10,6 +11,9 @@ const AllArt = () => {
 
     return (
         <div>
+            <Helmet>
+                <title>AllArt | Painting Pros</title>
+            </Helmet>
             <h1 className='text-4xl text-center my-10'>All Painting</h1>
             <div className='grid grid-cols-1 md:grid-cols-3 lg:mx-32 gap-10 '>
                 {

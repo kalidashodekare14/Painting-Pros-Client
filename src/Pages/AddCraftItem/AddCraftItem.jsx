@@ -1,6 +1,7 @@
 import React, { useContext, useState } from 'react';
 import Swal from 'sweetalert2'
 import { AuthContect } from '../../Provider/AuthProvider';
+import { Helmet } from 'react-helmet';
 
 const AddCraftItem = () => {
 
@@ -74,6 +75,9 @@ const AddCraftItem = () => {
 
     return (
         <div className='min-h-screen'>
+            <Helmet>
+                <title>Add Craft Item | Painting Pros</title>
+            </Helmet>
             <div className='card lg:mx-52 mx-5 shadow-xl p-5 mt-10'>
                 <h1 className='text-center text-4xl my-5 font-work'>Add Your Painting</h1>
                 <form onSubmit={handleAddPainting} className='space-y-3'>

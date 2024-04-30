@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import { CgShutterstock } from 'react-icons/cg';
 import { FaRegStar } from 'react-icons/fa';
 import { IoMdPricetags } from 'react-icons/io';
@@ -13,6 +14,9 @@ const AllCraftDetails = () => {
 
     return (
         <div>
+            <Helmet>
+                <title>All Craft Details | Painting Pros</title>
+            </Helmet>
             <div className='flex flex-col lg:flex-row justify-center lg:items-center min-h-screen space-x-10'>
                 <div>
                     <img className='lg:w-96' src={check.image} alt="" />

@@ -5,6 +5,7 @@ import { MdDateRange, MdDeleteForever } from "react-icons/md";
 import { FaEdit } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import Swal from 'sweetalert2';
+import { Helmet } from 'react-helmet';
 
 const MyArtCraftList = () => {
 
@@ -77,6 +78,9 @@ const MyArtCraftList = () => {
 
     return (
         <div >
+            <Helmet>
+                <title>My Art | Painting Pros</title>
+            </Helmet>
             <div className='flex justify-center items-center my-5'>
                 <details className="dropdown">
                     <summary className="m-1 btn">Sort By</summary>

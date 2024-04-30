@@ -5,6 +5,7 @@ import { IoIosStarOutline } from "react-icons/io";
 import { BiCustomize } from "react-icons/bi";
 import { CgShutterstock } from "react-icons/cg";
 import { FaRegStar } from 'react-icons/fa';
+import { Helmet } from 'react-helmet';
 
 
 const CraftDetails = () => {
@@ -15,6 +16,9 @@ const CraftDetails = () => {
     console.log(check)
     return (
         <div className='min-h-screen flex justify-center items-center'>
+            <Helmet>
+                <title>Craft Item | Painting Pros</title>
+            </Helmet>
             <div className='flex flex-col lg:flex-row justify-center lg:items-center space-x-10'>
                 <div className='lg:w-[40%] border-8 border-black p-3'>
                     <img className='w-full h-[80vh]' src={check.image} alt="" />

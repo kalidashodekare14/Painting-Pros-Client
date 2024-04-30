@@ -20,6 +20,7 @@ import UpdateMyArt from './Pages/UpdateMyArt/UpdateMyArt.jsx';
 import AllCraftDetails from './Pages/AllCraftDetails/AllCraftDetails.jsx';
 import ErrorPage from './Pages/ErrorPage/ErrorPage.jsx';
 
+
 const router = createBrowserRouter([
   {
     path: "/",

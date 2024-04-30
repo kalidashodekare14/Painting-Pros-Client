@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Helmet } from 'react-helmet';
 import { useLoaderData, useParams } from 'react-router-dom';
 import Swal from 'sweetalert2';
 
@@ -56,6 +57,9 @@ const UpdateMyArt = () => {
 
     return (
         <div className='min-h-screen'>
+            <Helmet>
+                <title>Update Craft | Painting Pros</title>
+            </Helmet>
             <div className='lg:mx-40 mx-5 shadow-xl p-5 mt-10 my-10'>
                 <h1 className='text-center text-4xl my-5 font-work'>Update Your Painting</h1>
                 <form onSubmit={handleUpdateMyArt} className='space-y-3'>

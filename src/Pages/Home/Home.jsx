@@ -7,6 +7,7 @@ import developer from '../../assets/developer.webp'
 import designer1 from '../../assets/designer.jpg'
 import designer2 from '../../assets/designer1.jpg'
 import images from '../../assets/pSlider.webp'
+import {Helmet} from "react-helmet";
 
 import 'swiper/css';
 import 'swiper/css/free-mode';
@@ -26,6 +27,9 @@ const Home = () => {
 
     return (
         <div>
+            <Helmet>
+                <title>Home | Painting Pros</title>
+            </Helmet>
             <div>
                 <Slider></Slider>
             </div>
