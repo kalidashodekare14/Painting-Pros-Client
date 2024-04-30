@@ -30,24 +30,24 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: <Home></Home>,
-        loader: () => fetch('http://localhost:5000/Craft_Item'),
+        loader: () => fetch('https://painting-pros-server.vercel.app/Craft_Item'),
         
       },
       {
         path: '/craft_details/:id',
         element: <PrivateRoutes><CraftDetails></CraftDetails></PrivateRoutes>,
-        loader: () => fetch('http://localhost:5000/Craft_Item')
+        loader: () => fetch('https://painting-pros-server.vercel.app/Craft_Item')
 
       },
       {
         path: 'all_art',
         element: <AllArt></AllArt>,
-        loader: () => fetch('http://localhost:5000/all_craft')
+        loader: () => fetch('https://painting-pros-server.vercel.app/all_craft')
       },
       {
         path: '/all_craft_details/:id',
         element: <PrivateRoutes><AllCraftDetails></AllCraftDetails></PrivateRoutes>,
-        loader: () => fetch(`http://localhost:5000/all_craft`)
+        loader: () => fetch(`https://painting-pros-server.vercel.app/all_craft`)
       },
       {
         path: 'add_craft',
@@ -60,7 +60,7 @@ const router = createBrowserRouter([
       {
         path: '/update_craft/:id',
         element: <PrivateRoutes><UpdateMyArt></UpdateMyArt></PrivateRoutes>,
-        loader: ({ params }) => fetch(`http://localhost:5000/update_craft/${params.id}`)
+        loader: ({ params }) => fetch(`https://painting-pros-server.vercel.app/update_craft/${params.id}`)
       },
       {
         path: 'login',

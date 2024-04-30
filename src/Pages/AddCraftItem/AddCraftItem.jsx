@@ -38,7 +38,7 @@ const AddCraftItem = () => {
         const info = { item_name, subcategory_Name, short_description, price, rating, processing_time, customization, stockStatus, image, email, displayName }
 
         console.log(info)
-        fetch('http://localhost:5000/Craft_Item', {
+        fetch('https://painting-pros-server.vercel.app/Craft_Item', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -59,7 +59,7 @@ const AddCraftItem = () => {
 
             })
 
-        fetch('http://localhost:5000/art_category',{
+        fetch('https://painting-pros-server.vercel.app/art_category',{
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

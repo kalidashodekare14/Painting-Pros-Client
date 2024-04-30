@@ -32,7 +32,7 @@ const UpdateMyArt = () => {
         const image = from.photoUrl.value
         const info = { item_name, subcategory_Name, short_description, price, rating, processing_time, image }
         console.log(info)
-        fetch(`http://localhost:5000/update_craft/${_id}`, {
+        fetch(`https://painting-pros-server.vercel.app/update_craft/${_id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

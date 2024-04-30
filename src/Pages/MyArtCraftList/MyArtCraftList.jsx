@@ -27,7 +27,7 @@ const MyArtCraftList = () => {
     }
 
     useEffect(() => {
-        fetch(`http://localhost:5000/my_art/${user?.email}`)
+        fetch(`https://painting-pros-server.vercel.app/my_art/${user?.email}`)
             .then(res => res.json())
             .then(data => {
                 console.log(data)
@@ -49,7 +49,7 @@ const MyArtCraftList = () => {
         }).then((result) => {
             if (result.isConfirmed) {
 
-                fetch(`http://localhost:5000/my_art/${_id}`, {
+                fetch(`https://painting-pros-server.vercel.app/my_art/${_id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())
