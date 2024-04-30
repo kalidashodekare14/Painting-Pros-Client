@@ -1,5 +1,6 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { Typewriter } from 'react-simple-typewriter'
 
 import 'swiper/css';
 import 'swiper/css/effect-fade';

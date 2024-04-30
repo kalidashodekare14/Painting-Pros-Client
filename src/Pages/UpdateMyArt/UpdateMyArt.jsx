@@ -56,8 +56,8 @@ const UpdateMyArt = () => {
 
     return (
         <div className='min-h-screen'>
-            <div className='lg:mx-40 mx-5 shadow-xl p-5 mt-10'>
-                <h1 className='text-center text-4xl my-5 font-work'>Add Your Painting</h1>
+            <div className='lg:mx-40 mx-5 shadow-xl p-5 mt-10 my-10'>
+                <h1 className='text-center text-4xl my-5 font-work'>Update Your Painting</h1>
                 <form onSubmit={handleUpdateMyArt} className='space-y-3'>
                     <div className='flex flex-col space-y-2'>
                         <label className='font-work font-[600] text-[#000000bd]' htmlFor="">Name</label>

@@ -6,6 +6,7 @@ const AllArt = () => {
 
     const allArt = useLoaderData()
     console.log(allArt)
+    
 
     return (
         <div>

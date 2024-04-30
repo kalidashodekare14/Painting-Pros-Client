@@ -15,6 +15,7 @@ import 'swiper/css/pagination';
 import './News.css'
 
 import { FreeMode, Pagination } from 'swiper/modules';
+import Categories from '../Categories/Categories';
 
 const Home = () => {
 
@@ -73,7 +74,7 @@ const Home = () => {
                 </div>
                 {/* category */}
                 <div>
-
+                    <Categories></Categories>
                 </div>
                 <div className='relative my-20 lg:mx-20 border p-5'>
                     <div className='flex justify-center items-center space-x-3'>

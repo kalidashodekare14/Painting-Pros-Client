@@ -41,7 +41,7 @@ const AllCraftDetails = () => {
                     <div>
                         <p className='text-[16px] tracking-[0.5px]'>{check.short_description}</p>
                     </div>
-                    <Link to='/'>
+                    <Link to='/all_art'>
                         <button className='btn mt-8'>Go Back</button>
                     </Link>
                 </div>
