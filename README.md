@@ -6,6 +6,8 @@
 
 ## 🔗 Live Link: [Painting Pros](https://painting-pros-3868a.web.app/)
 
+## Overview
+This is a painting project. There are various paintings in this project and anyone can buy these paintings. This project is for the benefit of those who love painting.
 
 
 ## Features
@@ -16,19 +18,33 @@
 
 - On the website I am creating an ad craft right. If any user wants to add data there then he can add data.
 
-- I have created some other routes on this website. If a user adds data under the name of my art and craft item, then only his data can be seen in that route.
+## Technologies
+[![My Skills](https://skillicons.dev/icons?i=react,tailwind,nodejs,express,mongodb)](https://skillicons.dev)
 
-- And made a little more route. Any user on that route. If adding data, all user's data will be seen there.
 
-##  npm package name:
--  [React Router](https://reactrouter.com/en/main)
--  [Tailwindcss](https://tailwindcss.com)
--  [Daisyui](https://daisyui.com/)
--  [Swiperjs](https://swiperjs.com)
--  [AOS Animation](https://michalsnik.github.io/aos)
-- [React-tooltip](https://react-tooltip.com/)
-- [React-Helmet](https://www.npmjs.com/package/react-helmet)
-- [React-simple-typewriter](https://www.npmjs.com/package/react-simple-typewriter)
+## Run Locally
 
-## Category Name:  
-- Painting and Drawing
+Clone the project
+
+```bash
+  git clone https://link-to-project
+```
+
+Go to the project directory
+
+```bash
+  cd my-project
+```
+
+Install dependencies
+
+```bash
+  npm install
+```
+
+Start the server
+
+```bash
+  npm run start
+```
+
